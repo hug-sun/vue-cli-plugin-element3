@@ -1,0 +1,32 @@
+<%_ if (options.import === 'full') { _%>
+import Element3 from 'element3'
+<%_ if (options.customTheme) { _%>
+import '../element-variables.scss'
+<%_ } else { _%>
+import 'element3/lib/theme-chalk/index.css'
+<%_ } _%> 
+<%_ if (options.lang !== 'en') { _%>
+import locale from 'element3/lib/locale/lang/<%= options.lang %>'
+<%_ } _%>
+<%_ } else { _%>
+import { ElButton } from 'element3'
+import 'element3/lib/theme-chalk/index.css'
+<%_ if (options.lang !== 'en') { _%>
+import lang from 'element3/lib/locale/lang/<%= options.lang %>'
+import locale from 'element3/lib/locale'
+<%_ }} _%>
+
+export default (app) => {
+  <%_ if (options.import === 'full') { _%>
+  <%_ if (options.lang !== 'en') { _%>
+  app.use(Element3, { locale })
+  <%_ } else { _%>
+  app.use(Element3)
+  <%_ } _%>
+  <%_ } else { _%>
+  <%_ if (options.lang !== 'en') { _%>
+  locale.use(lang)
+  <%_ } _%>
+  app.use(ElButton)
+  <%_ } _%>
+}

@@ -1,10 +1,11 @@
+
 const localeList = require('./lang.js')
 
 module.exports = [
   {
     type: 'list',
     name: 'import',
-    message: 'How do you want to import Element?',
+    message: 'How do you want to import Element3?',
     choices: [
       { name: 'Fully import', value: 'full' },
       { name: 'Import on demand', value: 'partial' }
@@ -18,14 +19,14 @@ module.exports = [
     message: 'Do you wish to overwrite Element\'s SCSS variables?',
     default: false,
   },
-  {
-    type: 'list',
-    name: 'lang',
-    message: 'Choose the locale you want to load',
-    choices: localeList.map(locale => ({
-      name: locale,
-      value: locale
-    })),
-    default: 'zh-CN'
-  }
+  // {
+  //   type: 'list',
+  //   name: 'lang',
+  //   message: 'Choose the locale you want to load',
+  //   choices: localeList.map(locale => ({
+  //     name: locale,
+  //     value: locale
+  //   })),
+  //   default: 'zh-CN'
+  // }
 ]

@@ -1,13 +1,14 @@
 {
-  "name": "vue-cli-plugin-element",
-  "version": "1.0.1",
-  "description": "vue-cli 3 plugin to add element-ui",
+  "name": "vue-cli-plugin-element3",
+  "version": "0.0.1",
+  "description": "vue-cli 4 plugin to add element3",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ElementUI/vue-cli-plugin-element.git"
+    "url": "git+https://github.com/hug-sun/vue-cli-plugin-element3.git"
   },
   "keywords": [
+    "element3",
     "element",
     "element-ui",
     "vue",
@@ -15,10 +16,14 @@
     "plugin",
     "cli"
   ],
-  "author": "Leopoldthecoder",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ElementUI/vue-cli-plugin-element/issues"
+    "url": "https://github.com/hug-sun/vue-cli-plugin-element3/issues"
   },
-  "homepage": "https://github.com/ElementUI/vue-cli-plugin-element#readme"
+  "homepage": "https://github.com/hug-sun/vue-cli-plugin-element3#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "figlet": "^1.5.0"
+  }
 }
