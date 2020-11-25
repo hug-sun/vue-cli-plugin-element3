@@ -9,7 +9,8 @@ import 'element3/lib/theme-chalk/index.css'
 import locale from 'element3/lib/locale/lang/<%= options.lang %>'
 <%_ } _%>
 <%_ } else { _%>
-import { Button } from 'element3'
+import { ElButton } from 'element3'
+import 'element3/lib/theme-chalk/index.css'
 <%_ if (options.lang !== 'en') { _%>
 import lang from 'element3/lib/locale/lang/<%= options.lang %>'
 import locale from 'element3/lib/locale'
@@ -26,6 +27,6 @@ export default (app) => {
   <%_ if (options.lang !== 'en') { _%>
   locale.use(lang)
   <%_ } _%>
-  app.use(Button)
+  app.use(ElButton)
   <%_ } _%>
 }

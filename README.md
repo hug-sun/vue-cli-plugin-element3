@@ -1,7 +1,7 @@
 # Vue-cli-plugin-element3
 
 Element plugin for `@vue/cli` 4.5.x
-## Inspired by
+### Inspired by
 https://github.com/ElementUI/vue-cli-plugin-element
 
 ### Install
@@ -15,6 +15,14 @@ vue create my-app
 cd my-app
 vue add element3
 ```
+
+### ToDo List
+- [ ] Import on demand
+- [ ] Choose the locale you want to load
+- [ ] Vue Cli UI Support
+
+
+
 
 You'll be asked some questions regarding how Element is configured in your project. After that, you're good to go.
 

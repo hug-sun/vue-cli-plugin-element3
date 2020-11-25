@@ -1,8 +1,8 @@
 module.exports = (api, opts, rootOptions) => {
   // 暂时不支持多语言
   opts.lang = 'en'
-  opts.import = 'full' // full/partial
-  opts.customTheme = false // true /false
+  partial  // opts.import = 'full' // full/partial
+  // opts.customTheme = false // true /false
 
   const utils = require('./utils')(api)
 
@@ -20,11 +20,12 @@ module.exports = (api, opts, rootOptions) => {
   })
 
   if (opts.import === 'partial') {
-    api.extendPackage({
-      devDependencies: {
-        'babel-plugin-component': '^1.1.1'
-      }
-    })
+    // 暂不支持css分包
+    // api.extendPackage({
+    //   devDependencies: {
+    //     'babel-plugin-component': '^1.1.1'
+    //   }
+    // })
   } else if (opts.customTheme) {
     api.render({
       './src/element-variables.scss': './templates/src/element-variables.scss.ejs'
@@ -52,16 +53,17 @@ module.exports = (api, opts, rootOptions) => {
   })
 
   api.onCreateComplete(() => {
-    if (opts.import === 'partial') {
-      utils.updateBabelConfig(cfg => {
-        const pluginComponent = ['component', {
-          'libraryName': 'element3',
-          'styleLibraryName': 'theme-chalk'
-        }]
-        cfg.plugins = cfg.plugins || []
-        cfg.plugins.push(pluginComponent)
-        return cfg
-      })
-    }
+    // 暂不支持按需加载
+    // if (opts.import === 'partial') {
+    //   utils.updateBabelConfig(cfg => {
+    //     const pluginComponent = ['component', {
+    //       'libraryName': 'element3',
+    //       'styleLibraryName': 'theme-chalk'
+    //     }]
+    //     cfg.plugins = cfg.plugins || []
+    //     cfg.plugins.push(pluginComponent)
+    //     return cfg
+    //   })
+    // }
   })
 }
