@@ -1,7 +1,7 @@
 module.exports = (api, opts, rootOptions) => {
   // 暂时不支持多语言
   opts.lang = 'en'
-  opts.partial  // opts.import = 'full' // full/partial
+  // opts.import = 'full' // full/partial
   // opts.customTheme = false // true /false
 
   const utils = require('./utils')(api)

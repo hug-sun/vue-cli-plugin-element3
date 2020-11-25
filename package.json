@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-element3",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "vue-cli 4 plugin to add element3",
   "main": "index.js",
   "repository": {
